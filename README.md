@@ -1,4 +1,4 @@
-# Salesforce W2L fail email -> CSV
+# Salesforce W2L Debug Email -> CSV
 
 This is a script to convert Salesforce Web-to-Lead failure emails (eg. "Salesforce Could Not Create This Lead') into a csv for mass loading.
 
