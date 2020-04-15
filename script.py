@@ -2,13 +2,11 @@ import re
 import csv
 
 
-
 def processFile():
 	
 	with open('input.txt') as file:
 		file_contents = file.read()
 		getIndexes(file_contents)
-
 
 
 def getIndexes(fileAsString):
@@ -20,7 +18,6 @@ def getIndexes(fileAsString):
 	footer_indexes = [m.start() for m in re.finditer(footer_text, fileAsString)];
 
 	parseFile(fileAsString, header_indexes, footer_indexes)
-
 
 
 def parseFile(fileAsString, header_indexes, footer_indexes):
@@ -35,7 +32,6 @@ def parseFile(fileAsString, header_indexes, footer_indexes):
 		records_as_text.append(fileAsString[start:end])
 
 	parseRecordsAsText(records_as_text)
-
 
 
 def parseRecordsAsText(records_as_text):
@@ -56,7 +52,6 @@ def parseRecordsAsText(records_as_text):
 	buildCsvFile(all_records)
 
 
-
 def buildCsvFile(all_records):
 
 	headers = getHeaders(all_records)
@@ -72,7 +67,6 @@ def buildCsvFile(all_records):
 	print(headers)
 
 
-
 def getHeaders(all_records):
 
 	headers = set()
@@ -81,7 +75,6 @@ def getHeaders(all_records):
 		headers.update(record.keys())
 	
 	return headers	
-
 
 
 processFile()
