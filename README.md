@@ -4,13 +4,14 @@ This is a script to convert Salesforce Web-to-Lead failure emails (eg. "Salesfor
 
 It's pretty niche, and it's badly written in python. It should only be used when you have no other options.
 
+
 ## Usage
 
 * The script expects an `input.txt` of concatenated failure emails, example below.
 * The script will create an `output.csv` of the record details that can be dataloaded.
 
 
-### Example `input.txt`
+### Example input
 
 ```
 Salesforce could not create this lead because of the reason listed below. For more information about this error or help with Web-to-Lead, please contact Customer Support.
